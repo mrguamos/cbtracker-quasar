@@ -2,7 +2,7 @@
   <q-page>
     <Suspense>
       <template #default>
-        <dashboard />
+        <dashboard class="q-pa-md" />
       </template>
       <template #fallback>
         <div>Loading please wait ...</div>
