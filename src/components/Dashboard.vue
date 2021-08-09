@@ -21,8 +21,8 @@ export default defineComponent({
   name: 'Dashboard',
   components: { Card },
   async setup() {
-    const web3: any = inject('web3');
-    const oracle: any = inject('oracle');
+    const web3: any | unknown = inject('web3');
+    const oracle: any | unknown = inject('oracle');
 
     const oraclePrice = ref(0);
     const skillPrice = ref(0);

@@ -143,9 +143,10 @@ export default defineComponent({
       prompt.value = false;
     };
 
-    const onSubmit = () => {
+    const onSubmit = async () => {
       const a: MetaAccount = Object.assign({}, account);
       accounts.value.push(a);
+      await fetchAccounts();
       localStorage.setItem(
         'metamask-cb-accounts',
         JSON.stringify(unref(accounts))
